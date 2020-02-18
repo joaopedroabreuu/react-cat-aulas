@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Footer extends React.Component {
+class Home extends React.Component {
     
     constructor(props) {
         super(props)
@@ -36,6 +36,7 @@ class Footer extends React.Component {
     render() {
         return (
             <div>
+                <h1>Página - Home</h1>
                 {this.state.loading ? 'Carregando...' : ' '}
                 {this.state.error  ? (
                     <p style={{color: 'red'}}>{this.state.data.message}</p>
@@ -45,10 +46,10 @@ class Footer extends React.Component {
                         <img src={this.state.data.avatar_url} />
                     </div>
                 )}
-                <h3>Footer</h3>
+                <h3>MainContent</h3>
             </div>
         )
     }
 }
 
-export default Footer;
+export default Home;

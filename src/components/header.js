@@ -1,10 +1,20 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
-const Header = (props) => {
-  const { text } = props;
+const Header = () => {
     return (
       <div id="header">
-        <h2>{text}</h2>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/cep/61940620">CEP</Link>
+          </li>
+        </ul>
       </div>
     );
   };
