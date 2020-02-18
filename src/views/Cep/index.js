@@ -6,7 +6,6 @@ class Cep extends React.Component {
         super(props)
         this.state =  {
             data: {},
-            cep: '',
             loading: false,
             error: false
         }
@@ -21,9 +20,8 @@ class Cep extends React.Component {
     }
 
     componentDidMount() {
-        // this.setState({...this.state, cep: this.props.match.params.cep});
-        // console.log(this.state);
-        this.getContents(this.props.match.params.cep)
+        let cep = this.props.match.params.cep;
+        this.getContents(cep)
         .then( data=> {
             this.setState({...this.state, data: data, loading: false, error: false})
         } )
@@ -48,7 +46,6 @@ class Cep extends React.Component {
                         <h2>{this.state.data.estado}</h2>
                     </div>
                 )}
-                <h3>CEP CONTENT</h3>
             </div>
         )
     }
